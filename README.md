@@ -2,18 +2,18 @@
 
 Maven repository with latest version (1.3.0):
 
-`<repository>
-	<id>slashidea-hgd</id>
-	<url>https://github.com/mycartracks/hibernate-generic-dao/raw/master/repository</url>
-</repository>`
+    <repository>
+    	<id>slashidea-hgd</id>
+    	<url>https://github.com/mycartracks/hibernate-generic-dao/raw/master/repository</url>
+    </repository>
 
 Dependency:
 
-`<dependency>
-		<groupId>com.googlecode.genericdao</groupId>
-		<artifactId>dao-hibernate</artifactId>
-		<version>1.3.0</version>
-</dependency>`
+    <dependency>
+    		<groupId>com.googlecode.genericdao</groupId>
+    		<artifactId>dao-hibernate</artifactId>
+    		<version>1.3.0</version>
+    </dependency>
 
 Automatically exported from code.google.com/p/hibernate-generic-dao
 
