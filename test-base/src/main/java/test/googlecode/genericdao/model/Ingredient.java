@@ -25,7 +25,7 @@ public class Ingredient {
 	private String name;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public long getIngredientId() {
 		return ingredientId;
 	}

@@ -1,0 +1,33 @@
+
+#eclipse 
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+target/
+*.iml
+fabfile.pyc
+
+# Intellij project files
+*.iml
+*.ipr
+*.iws
+.idea/
+
+#Gradle
+.gradletasknamecache
+.gradle/
+build/
+bin/
+
+mycartracks-web/FAILED TO INITIALIZE MYJREBEL LICENSING!.error

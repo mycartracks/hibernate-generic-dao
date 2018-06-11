@@ -30,7 +30,7 @@ import javax.persistence.Table;
 @Table(name = "home")
 public class Home {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String type;
 	@OneToOne

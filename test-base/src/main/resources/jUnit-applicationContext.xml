@@ -20,20 +20,24 @@
 		date values for beans defined in spring beans XML -->
 	<bean id="customEditorConfigurer"
 		class="org.springframework.beans.factory.config.CustomEditorConfigurer">
-		<property name="customEditors">
-			<map>
-				<entry key="java.util.Date">
-					<bean
-						class="org.springframework.beans.propertyeditors.CustomDateEditor">
-						<constructor-arg index="0">
-							<bean class="java.text.SimpleDateFormat">
-								<constructor-arg value="dd/MM/yyyy" />
-							</bean>
-						</constructor-arg>
-						<constructor-arg index="1" value="false" />
-					</bean>
-				</entry>
-			</map>
+		<property name="propertyEditorRegistrars">
+			<list>
+				<bean class="test.googlecode.genericdao.CustomEditorRegistrar">
+					<constructor-arg index="0">
+						<value type="java.lang.Class">java.util.Date</value>
+					</constructor-arg>
+					<constructor-arg index="1">
+						<bean class="org.springframework.beans.propertyeditors.CustomDateEditor">
+							<constructor-arg index="0">
+								<bean class="java.text.SimpleDateFormat">
+									<constructor-arg value="dd/MM/yyyy" />
+								</bean>
+							</constructor-arg>
+							<constructor-arg index="1" value="false" />
+						</bean>
+					</constructor-arg>
+				</bean>
+			</list>
 		</property>
 	</bean>
 
