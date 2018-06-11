@@ -1,4 +1,20 @@
-# hibernate-generic-dao
+# hibernate-generic-dao with Hibernate 5 compatibility
+
+Maven repository with latest version (1.3.0):
+
+`<repository>
+	<id>slashidea-hgd</id>
+	<url>https://github.com/mycartracks/hibernate-generic-dao/raw/master/repository</url>
+</repository>`
+
+Dependency:
+
+`<dependency>
+		<groupId>com.googlecode.genericdao</groupId>
+		<artifactId>dao-hibernate</artifactId>
+		<version>1.3.0</version>
+</dependency>`
+
 Automatically exported from code.google.com/p/hibernate-generic-dao
 
 Since Google Code closes done, I have exported the hibernate-generic-dao project here. The Wiki was not automatically exported, so I did a simple copy and paste, which messed up the formatting a lot.
@@ -11,13 +27,13 @@ We had worked on a project where we hand-coded all of our DAOs. This produced fo
 This framework aims to ease our troubles.
 Why might you consider looking into this framework?
 
-    Generic DAO: With the sweetness of Java generics, the concept of generic DAOs is not new, and it’s not difficult. However, we’ve put a lot of work into making these easy to use and robust. So if you like the way we’ve done it, then this framework provides ready-made code for you. On the other hand if you’d rather make your own, then simply feel free to look at our source code for ideas and help on a few potentially tricky issues. 
+    Generic DAO: With the sweetness of Java generics, the concept of generic DAOs is not new, and it’s not difficult. However, we’ve put a lot of work into making these easy to use and robust. So if you like the way we’ve done it, then this framework provides ready-made code for you. On the other hand if you’d rather make your own, then simply feel free to look at our source code for ideas and help on a few potentially tricky issues.
 
-    Search: Search is the most original and sophisticated part of this framework, and it can be used with or without the generic DAO portion of the framework. The search capability is designed around the use-case of a list page with sorting, filtering, column selection and paging. However, its use is certainly not limited to that. The value that the search adds is simpler, more robust querying with less coding and less testing. It is similar to Hibernate Criteria, but it is simpler to use and can easily move across layers of an application including view and even remote layers. Plus is works with both Hibernate and JPA*. 
+    Search: Search is the most original and sophisticated part of this framework, and it can be used with or without the generic DAO portion of the framework. The search capability is designed around the use-case of a list page with sorting, filtering, column selection and paging. However, its use is certainly not limited to that. The value that the search adds is simpler, more robust querying with less coding and less testing. It is similar to Hibernate Criteria, but it is simpler to use and can easily move across layers of an application including view and even remote layers. Plus is works with both Hibernate and JPA*.
 
-    Remote DAO (for R.I.A.s?): If you you’re like us, you don’t want to write and configure an individual DAO style remote service for each entity in a R.I.A. or other client-heavy application. This framework may have the solution. We provide utilities and sample code to adapt our single general DAO to any remoting technology interface. Just configure this single remote access point and the client can do any basic CRUD or search operation on any entity. Again, if you don’t like our way of doing things, maybe you can at least get some ideas from our source code. 
+    Remote DAO (for R.I.A.s?): If you you’re like us, you don’t want to write and configure an individual DAO style remote service for each entity in a R.I.A. or other client-heavy application. This framework may have the solution. We provide utilities and sample code to adapt our single general DAO to any remoting technology interface. Just configure this single remote access point and the client can do any basic CRUD or search operation on any entity. Again, if you don’t like our way of doing things, maybe you can at least get some ideas from our source code.
 
-    Remote Search (for R.I.A.s?): As mentioned above, the framework can provide a single point for client-server CRUD and search operations. The framework’s search is meant to be able to cross the client-server boundary. So lists and searches in the client application can take advantage of the same easy-to-use features and consistency that the search functionality provides in the server tier or single tier application. This consistency allowed us to create a reusable collection type in Adobe Flex 3 that is associated with a single search object and automatically updates itself from the server according to the search parameters.** 
+    Remote Search (for R.I.A.s?): As mentioned above, the framework can provide a single point for client-server CRUD and search operations. The framework’s search is meant to be able to cross the client-server boundary. So lists and searches in the client application can take advantage of the same easy-to-use features and consistency that the search functionality provides in the server tier or single tier application. This consistency allowed us to create a reusable collection type in Adobe Flex 3 that is associated with a single search object and automatically updates itself from the server according to the search parameters.**
 
 *A fairly simple adapter is required for each JPA provider. Right now we only have an adapter for Hibernate Entity Manager. If anyone would like to contribute an adapter for any other JPA provider (OpenJPA, TopLink, etc.), that would be great.
 
